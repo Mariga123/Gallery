@@ -8,6 +8,12 @@ class Category(models.Model):
 
     def __str__(self):
         return self.name
+
+    def save_category(self):
+        self.save()
+
+    def delete_category(self):
+        self.delete()  
  
 
 class Location(models.Model):
@@ -21,6 +27,15 @@ class Location(models.Model):
     def __str__(self):
         return self.name
 
+    @classmethod
+    def update_location(cls, id, value):
+        cls.objects.filter(id=id).update(image=value)
+
+    def save_location(self):
+        self.save()
+
+    def delete_location(self):
+        self.delete()
 
 class Image(models.Model):
     image = models.ImageField(upload_to='images/')
