@@ -78,7 +78,7 @@ WSGI_APPLICATION = 'photoshare.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'photos',
+        'NAME': 'hell',
         'USER': 'moringa',
     'PASSWORD':'zelly',
     }

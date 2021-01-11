@@ -1,23 +1,14 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-</head>
-
-<body>
-
-    <nav class="navbar navbar-expand-sm bg-light navbar-light">
-        <ul class="navbar-nav">
-            <li class="nav-item active">
-                <a class="navbar-brand" href="#">My Personal gallery</a>
-                <a class="navbar-brand" href="{% url 'admin:index' %}">Admin</a>
-            </li>
-        </ul>
-    </nav>
-
-</body>
-
-</html>
+<nav class="navbar navbar-expand-lg navbar-light bg-transparent">
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02"
+        aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+            <a class="navbar-brand" href="{% url 'admin:index' %}">Admin</a>
+        <form class="form-inline my-2 my-md-0" action="/search" role="search">
+            <input class="form-control mr-sm-2" type="search" placeholder="Search from Categories" name="imagesearch"
+                aria-label="Search">
+            <button class="btn btn-default btn-md my-2 my-sm-0" type="submit">Search</button>
+        </form>
+    </div>
+</nav>
