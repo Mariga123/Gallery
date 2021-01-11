@@ -13,7 +13,7 @@ class Category(models.Model):
         self.save()
 
     def delete_category(self):
-        self.delete()  
+        self.delete() 
  
 
 class Location(models.Model):
