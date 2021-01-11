@@ -1,4 +1,3 @@
- 
 {% extends 'base.html' %}
 {% block content %}
 <div class="container-fluid boded" id="b">
@@ -11,7 +10,7 @@
 
 
             <div class="modal fade " id="{{image.id}}" tabindex="-1" role="dialog"
-                 aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+                aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
                 <div class="modal-dialog modal-dialog-centered modal-md" role="document">
                     <div class="modal-content modalcard">
                         <div class="modal-header">
@@ -24,12 +23,13 @@
                             <img src="{{image.image.url}}" alt="{{image.name}}" class="img-fluid">
                             <p class="imgdesc text-center">{{image.description}}</p>
                             <span class="btn btn-sm btn-outline-warning">{{image.category}}</span> <a
-                                href="/location/{{image.location}}" class="btn btn-sm btn-outline-info">{{image.location}}</a>
+                                href="/location/{{image.location}}"
+                                class="btn btn-sm btn-outline-info">{{image.location}}</a>
                         </div>
                         <div class="modal-footer">
-                            <input class="form-control input-lg" type="text"
-                                   value="{{image.image.url}}" id="{{image.id}}.url">
-                            <button class="btn btn-success btn-sm" onclick="copyLink('{{image.id}}.url')">Copylink</button>
+                            <input class="form-control input-lg" type="text" value="{{image.image.url}}" id="myInput">
+                            <button class="btn btn-success btn-sm"
+                                onclick="myFunction('{{image.id}}.url')">Copylink</button>
                             <button type="button" class="btn btn-outline-danger btn-sm" data-dismiss="modal">Close
                             </button>
                         </div>
