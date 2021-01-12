@@ -6,6 +6,9 @@
     <h2 class="text-center" id="found">Found {{ images|length }} images in '{{message}}' category</h2>
     {% else %}
     <h2 class="text-center" id="foundnon"> Found 0 images for your search {{message}}</h2>
+    <a class="d-block mx-auto" href="/">
+        <button class="btn btn-sm btn-warning d-block mx-auto">Back Home</button>
+    </a>
     {% endif %}
     {% if images %}
     <div class="card-columns">
